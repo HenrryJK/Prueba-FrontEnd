@@ -11,6 +11,6 @@ export class TrabajadorService {
     private http:HttpClient
   ) {}
   getTrabajadores(): Observable<Trabajador[]>{
-    return this.http.get<Trabajador[]>(this.url+'/api/courses');
+    return this.http.get<Trabajador[]>(this.url+'wp-json/api/courses');
   }
 }
