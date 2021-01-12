@@ -1,1 +1,60 @@
-<p>trabajador works!</p>
+<table mat-table [dataSource]="trabajadores" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let trabajador"> {{trabajador.id}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef> Title </th>
+      <td mat-cell *matCellDef="let trabajador"> {{trabajador.title}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="teacher">
+      <th mat-header-cell *matHeaderCellDef> Teacher </th>
+      <td mat-cell *matCellDef="let trabajador"> {{trabajador.teacher}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="photo_teacher">
+      <th mat-header-cell *matHeaderCellDef> Photo_teacher </th>
+      <td mat-cell *matCellDef="let trabajador"> {{trabajador.photo_teacher}} </td>
+    </ng-container>
+  
+    
+    <ng-container matColumnDef="availability">
+        <th mat-header-cell *matHeaderCellDef> Availability </th>
+        <td mat-cell *matCellDef="let trabajador"> {{trabajador.availability}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="intro">
+        <th mat-header-cell *matHeaderCellDef> Intro </th>
+        <td mat-cell *matCellDef="let trabajador"> {{trabajador.intro}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="region">
+        <th mat-header-cell *matHeaderCellDef> region </th>
+        <td mat-cell *matCellDef="let trabajador"> {{trabajador.region}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="tags">
+        <th mat-header-cell *matHeaderCellDef> tags </th>
+        <td mat-cell *matCellDef="let trabajador"> {{trabajador.tags}} </td>
+      </ng-container>
+      
+      <ng-container matColumnDef="hours">
+        <th mat-header-cell *matHeaderCellDef> hours </th>
+        <td mat-cell *matCellDef="let trabajador"> {{trabajador.hours}} </td>
+      </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+  
